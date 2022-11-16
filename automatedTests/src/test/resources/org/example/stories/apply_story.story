@@ -7,20 +7,20 @@ I want to use Behaviour-Driven Development
 
 Scenario: navigate to appartment page
 
-Given on 'frontpage_signed_in'
-When 'apartment' is clicked
-Then navigated to 'apartmentpage'
+Given on Frontpage_signed_in
+When property1 is clicked
+Then navigated to property
 
 Scenario: another scenario
 
-Given on 'apartmentpage'
-When 'apply' is clicked
-Then navigated to 'applypage'
+Given on property
+When applyBtn is clicked
+Then navigated to apply
 
 Scenario: and another
 
-Given on 'applypage'
-When 'apply' is clicked
-Then navigated to 'apartmentpage'
+Given on apply
+When applyBtn is clicked
+Then navigated to Fonrtpage_signed_in
 
 

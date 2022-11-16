@@ -15,17 +15,19 @@ public class ApplySteps {
 
     WebDriver driver;
 
-    private final String url = "http://localhost:63342";
+    private final String url = "file:///Users/nicolajaalykkehansen/ise/propertyportal/html/";
 
     @BeforeScenario
     public void scenarioSetup() {
         driver = new ChromeDriver();
-        driver.get("http://localhost:63342/Frontpage_signed_in.html");
+        driver.get(url + "Frontpage_signed_in.html");
     }
 
     @Given("on $page")
     public void givenOnPage(String page){
-        assertThat(driver.getCurrentUrl()).isEqualTo("url" + page + ".html");
+        System.out.println(url + page + ".html");
+        driver.get(url + page + ".html");
+        assertThat(driver.getCurrentUrl()).isEqualTo(url + page + ".html");
     }
 
     @When("$button is clicked")
@@ -35,6 +37,11 @@ public class ApplySteps {
 
     @Then("navigated to $page")
     public void navigatedToPage(String page){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         assertThat(driver.getCurrentUrl()).isEqualTo("url" + page + ".html");
     }
 
