@@ -7,7 +7,7 @@ I want to use Behaviour-Driven Development
 
 Scenario: navigate to appartment page
 
-Given on 'applicantfrontpage'
+Given on 'frontpage_signed_in'
 When 'apartment' is clicked
 Then navigated to 'apartmentpage'
 
