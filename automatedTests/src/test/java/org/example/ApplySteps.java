@@ -19,7 +19,7 @@ public class ApplySteps {
 
     @Given("on '$page'")
     private void givenOnPage(String page){
-        asse
+        assert (true == false);
         String title = driver.getTitle();
         System.out.println("is called");
         System.out.println(title);
