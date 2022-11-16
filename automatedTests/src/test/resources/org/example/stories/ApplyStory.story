@@ -1,10 +1,3 @@
-Feature: A story is a collection of scenarios
-
-Narrative:
-In order to communicate effectively to the business some functionality
-As a development team
-I want to use Behaviour-Driven Development
-
 Scenario: navigate to appartment page
 
 Given on Frontpage_signed_in
@@ -21,6 +14,6 @@ Scenario: and another
 
 Given on apply
 When applyBtn is clicked
-Then navigated to Fonrtpage_signed_in
+Then navigated to Frontpage_signed_in
 
 

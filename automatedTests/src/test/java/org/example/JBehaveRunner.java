@@ -39,7 +39,7 @@ public class JBehaveRunner extends JUnitStories {
 
     @Override
     public InjectableStepsFactory stepsFactory() {
-        return new InstanceStepsFactory(configuration(), new ApplySteps());
+        return new InstanceStepsFactory(configuration(), new Steps());
     }
 }
 

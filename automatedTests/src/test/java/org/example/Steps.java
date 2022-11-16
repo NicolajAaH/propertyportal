@@ -3,14 +3,15 @@ package org.example;
 import org.jbehave.core.annotations.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class ApplySteps {
+public class Steps {
 
-    public ApplySteps() {
+    public Steps() {
     }
 
     WebDriver driver;
@@ -25,7 +26,6 @@ public class ApplySteps {
 
     @Given("on $page")
     public void givenOnPage(String page){
-        System.out.println(url + page + ".html");
         driver.get(url + page + ".html");
         assertThat(driver.getCurrentUrl()).isEqualTo(url + page + ".html");
     }
@@ -35,14 +35,16 @@ public class ApplySteps {
         driver.findElement(By.id(button)).click();
     }
 
+    @When("$field is filled with $text")
+    public void textIsFilled(String field, String text){
+        WebElement webElement = driver.findElement(By.id(field));
+        webElement.sendKeys(text);
+        assertThat(webElement.getText()).isEqualTo(text);
+    }
+
     @Then("navigated to $page")
     public void navigatedToPage(String page){
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        assertThat(driver.getCurrentUrl()).isEqualTo("url" + page + ".html");
+        assertThat(driver.getCurrentUrl()).isEqualTo(url + page + ".html");
     }
 
     @AfterScenario
