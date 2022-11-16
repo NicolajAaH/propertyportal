@@ -9,7 +9,6 @@ import org.jbehave.core.junit.JUnitStories;
 import org.jbehave.core.reporters.StoryReporterBuilder;
 import org.jbehave.core.steps.InjectableStepsFactory;
 import org.jbehave.core.steps.InstanceStepsFactory;
-import org.jbehave.web.selenium.SeleniumConfiguration;
 
 import java.util.List;
 

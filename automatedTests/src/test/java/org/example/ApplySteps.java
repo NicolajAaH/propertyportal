@@ -17,25 +17,24 @@ public class ApplySteps {
         driver.get("https://www.selenium.dev/selenium/web/web-form.html");
     }
 
-    @Given("on '$page'")
-    private void givenOnPage(String page){
-        assert (true == false);
+    @Given("on $page")
+    public void givenOnPage(String page){
         String title = driver.getTitle();
-        System.out.println("is called");
-        System.out.println(title);
+        driver.findElement()
+
     }
 
     @When("'$button' is selected")
-    private void whenButtonIsSelected(String button){
+    public void whenButtonIsSelected(String button){
 
     }
 
     @When("'$button' is clicked")
-    private void whenButtonIsClicked(String button){
+    public void whenButtonIsClicked(String button){
     }
 
     @Then("navigated to '$page'")
-    private void whenButtonIsClicked(){
+    public void whenButtonIsClicked(){
     }
 
     @AfterScenario
