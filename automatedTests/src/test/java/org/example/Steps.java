@@ -16,12 +16,12 @@ public class Steps {
 
     WebDriver driver;
 
+    //Change to URL to html pages/website for testing
     private final String url = "file:///Users/nicolajaalykkehansen/ise/propertyportal/html/";
 
     @BeforeScenario
     public void scenarioSetup() {
         driver = new ChromeDriver();
-        driver.get(url + "Frontpage_signed_in.html");
     }
 
     @Given("on $page")
@@ -35,11 +35,15 @@ public class Steps {
         driver.findElement(By.id(button)).click();
     }
 
+    @When("$checkbox is checked")
+    public void checkboxIsChecked(String checkbox){
+        driver.findElement(By.id(checkbox)).click();
+    }
+
     @When("$field is filled with $text")
     public void textIsFilled(String field, String text){
         WebElement webElement = driver.findElement(By.id(field));
         webElement.sendKeys(text);
-        assertThat(webElement.getText()).isEqualTo(text);
     }
 
     @Then("navigated to $page")

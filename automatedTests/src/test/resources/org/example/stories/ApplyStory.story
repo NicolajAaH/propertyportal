@@ -1,19 +1,19 @@
-Scenario: navigate to appartment page
+Scenario: Navigate to apartment page when property is clicked
 
 Given on Frontpage_signed_in
 When property1 is clicked
 Then navigated to property
 
-Scenario: another scenario
+Scenario: Navigated to apply page when apply is clicked
 
 Given on property
 When applyBtn is clicked
 Then navigated to apply
 
-Scenario: and another
+Scenario: Navigated to property when apply for property is clicked
 
 Given on apply
 When applyBtn is clicked
-Then navigated to Frontpage_signed_in
+Then navigated to property
 
 
