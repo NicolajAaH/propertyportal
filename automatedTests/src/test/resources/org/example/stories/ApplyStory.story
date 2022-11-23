@@ -13,7 +13,8 @@ Then apply is displayed for me
 Scenario: Navigated to property when apply for property is clicked
 
 Given I am on apply
-When I click on applyBtn
+When I fill descriptionText with Description about me
+And I click on applyBtn
 Then property is displayed for me
 
 
