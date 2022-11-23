@@ -24,29 +24,29 @@ public class Steps {
         driver = new ChromeDriver();
     }
 
-    @Given("on $page")
+    @Given("I am on $page")
     public void givenOnPage(String page){
         driver.get(url + page + ".html");
         assertThat(driver.getCurrentUrl()).isEqualTo(url + page + ".html");
     }
 
-    @When("$button is clicked")
+    @When("I click on $button")
     public void buttonIsClicked(String button){
         driver.findElement(By.id(button)).click();
     }
 
-    @When("$checkbox is checked")
+    @When("I check $checkbox")
     public void checkboxIsChecked(String checkbox){
         driver.findElement(By.id(checkbox)).click();
     }
 
-    @When("$field is filled with $text")
+    @When("I fill $field with $text")
     public void textIsFilled(String field, String text){
         WebElement webElement = driver.findElement(By.id(field));
         webElement.sendKeys(text);
     }
 
-    @Then("navigated to $page")
+    @Then("$page is displayed for me")
     public void navigatedToPage(String page){
         assertThat(driver.getCurrentUrl()).isEqualTo(url + page + ".html");
     }
