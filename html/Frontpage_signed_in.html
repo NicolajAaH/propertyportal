@@ -3,108 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <title>Property Portal</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-<header id="header_signin">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <img src="https://cdn-icons-png.flaticon.com/512/951/951867.png" width="50", height="50"></img>
-            </div>
-            <div class="col-lg-8">
-                <h1>Property Portal</h1>
-            </div>
-            <div class="col">
-                <i class="fa fa-user" style="font-size:24px"></i>
-            </div>
-            <div class="col">
-                <i class="fa fa-envelope-o" style="font-size:24px"></i>
-            </div>
-            <div class="col">
-                <a href="Frontpage_not_signed_in.html">
-                    <button id="signOutBtn">Sign out</button>
-                </a>
-            </div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div>
+        <div class="col">
+            <img src="https://cdn-icons-png.flaticon.com/512/951/951867.png" width="50" , height="50"></img>
         </div>
     </div>
-</header>
+    <a class="navbar-brand" href="#">Property Portal</a>
+
+    <div class="ml-auto">
+        <i class="fa fa-user" style="font-size:40px"></i>
+    </div>
+    <div class="ml-auto">
+        <i class="fa fa-envelope-o float-right" style="font-size:40px"></i>
+    </div>
+
+    <div class="float-right ml-auto">
+        <a href="Frontpage_not_signed_in.html" class="pull-right">
+            <button class="btn navbar-btn btn-danger pull-right" id="signOutBtn">Sign out</button>
+        </a>
+    </div>
+</nav>
 
 
 <div id="input_form">
     <div class="container">
-        <h5>Recommended flats</h5>
+        <h1>Recommended properties</h1>
         <div class="row">
             <div class="col-lg-10">
                 <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="searchInputText" placeholder="search">
+                        <input type="text" class="form-control" id="searchInputText" placeholder="Search">
                     </div>
                 </form>
             </div>
             <div class="col">
                 <a href="Frontpage_searchResult_signin.html">
-                    <button id="searchBtn">Search</button>
+                    <button id="searchBtn" class="btn btn-primary">Search</button>
                 </a>
             </div>
             <div class="col">
-                <button>
+                <button class="btn btn-primary">
                     <i class="fa fa-filter" style="font-size:24px" id="filterBtn"></i>
                 </button>
             </div>
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-12">
+        <div class="card-deck">
+            <div class="card" style="width: 18rem;">
+                <img src="https://d2k4yjfecjwzua.cloudfront.net/F69937C4-85F7-4C48-91B9-360034ED3D1E/563686_GalleryPicture.jpg"
+                     class="card-img-top img-fluid" alt="..." style="max-height: 200px;">
+                <div class="card-body d-flex flex-column mt-auto">
+                    <h5 class="card-title">Apartment 5000kr./month</h5>
+                    <p class="card-text">Nice apartment with a view in Odense C.</p>
+                    <a href="property.html" id="property1" class="btn btn-primary" style="margin-top: auto">See more information</a>
+                </div>
+            </div>
 
-<div id="displayPropertyCards">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <a href="property.html" id="property1">
-                    <img src="https://d2k4yjfecjwzua.cloudfront.net/F69937C4-85F7-4C48-91B9-360034ED3D1E/563686_GalleryPicture.jpg"
-                         width="200" , height="200"></img>
-                </a>
+            <div class="card" style="width: 18rem;">
+                <img src="https://d2k4yjfecjwzua.cloudfront.net/CDC980E8-1777-44A8-B5CE-A7F4A97E7FBE/556277_GalleryPicture.jpg"
+                     class="card-img-top img-adjusted" alt="..." style="max-height: 200px;">
+                <div class="card-body d-flex flex-column mt-auto">
+                    <h5 class="card-title">House 7000kr./month</h5>
+                    <p class="card-text">Quiet house with outdoor space in Aarhus C.</p>
+                    <a href="property.html" id="property2" class="btn btn-primary" style="margin-top: auto">See more information</a>
+                </div>
             </div>
-            <div class="col">
-                <a href="property.html" id="property2">
-                    <img src="https://d2k4yjfecjwzua.cloudfront.net/CDC980E8-1777-44A8-B5CE-A7F4A97E7FBE/556277_GalleryPicture.jpg"
-                         width="200" , height="200"></img>
-                </a>
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://d2k4yjfecjwzua.cloudfront.net/7D7B4617-3FB0-4CDF-9AB2-F17FFD3D5FC8/508366_GalleryPicture.jpg"
+                     class="card-img-top img-adjusted" alt="..." style="max-height: 200px;">
+                <div class="card-body d-flex flex-column mt-auto">
+                    <h5 class="card-title">Apartment 5500kr./month</h5>
+                    <p class="card-text">Cosy central apartment in Copenhagen</p>
+                    <a href="property.html" id="property3" class="btn btn-primary" style="margin-top: auto">See more information</a>
+                </div>
             </div>
-            <div class="col">
-                <a href="property.html" id="property3">
-                    <img src="https://d2k4yjfecjwzua.cloudfront.net/7D7B4617-3FB0-4CDF-9AB2-F17FFD3D5FC8/508366_GalleryPicture.jpg"
-                         width="200" , height="200"></img>
-                </a>
-            </div>
-            <div class="col">
-                <a href="property.html" id="property4">
-                    <img src="https://d2k4yjfecjwzua.cloudfront.net/26E98CDF-CF0F-4FE5-853A-7637FA633656/586905_GalleryPicture.jpg"
-                         width="200" , height="200"></img>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <p>nice flat with a view
-                <p>
-            </div>
-            <div class="col">
-                <p>quiet flat with outdoor space
-                <p>
-            </div>
-            <div class="col">
-                <p>cosy central flat
-                <p>
-            </div>
-            <div class="col">
-                <p>newly build flat with seaview
-                <p>
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://d2k4yjfecjwzua.cloudfront.net/26E98CDF-CF0F-4FE5-853A-7637FA633656/586905_GalleryPicture.jpg"
+                     class="card-img-top img-fluid" alt="..." style="max-height: 200px;">
+                <div class="card-body d-flex flex-column mt-auto">
+                    <h5 class="card-title">Apartment 9000kr./month</h5>
+                    <p class="card-text">Newly build apartment with seaview in Aalborg</p>
+                    <a href="property.html" id="property4" class="btn btn-primary" style="margin-top: auto">See more information</a>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+
 </body>
 </html>

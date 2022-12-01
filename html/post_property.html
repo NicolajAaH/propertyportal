@@ -9,29 +9,27 @@
 </head>
 
 <body>
-<header id="header_signin">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <img src="https://cdn-icons-png.flaticon.com/512/951/951867.png" width="50" , height="50"></img>
-            </div>
-            <div class="col-lg-8">
-                <h1>Property Portal</h1>
-            </div>
-            <div class="col">
-                <i class="fa fa-user" style="font-size:24px"></i>
-            </div>
-            <div class="col">
-                <i class="fa fa-envelope-o" style="font-size:24px"></i>
-            </div>
-            <div class="col">
-                <a href="Frontpage_not_signed_in.html">
-                    <button id="signOutBtn">Sign out</button>
-                </a>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div>
+        <div class="col">
+            <img src="https://cdn-icons-png.flaticon.com/512/951/951867.png" width="50" , height="50"></img>
         </div>
     </div>
-</header>
+    <a class="navbar-brand" href="#">Property Portal</a>
+
+    <div class="ml-auto">
+        <i class="fa fa-user" style="font-size:40px"></i>
+    </div>
+    <div class="ml-auto">
+        <i class="fa fa-envelope-o float-right" style="font-size:40px"></i>
+    </div>
+
+    <div class="float-right ml-auto">
+        <a href="Frontpage_not_signed_in.html" class="pull-right">
+            <button class="btn navbar-btn btn-danger pull-right" id="signOutBtn">Sign out</button>
+        </a>
+    </div>
+</nav>
 
 <div class="container">
     <div class="row">
@@ -42,22 +40,23 @@
                         <form>
                             <div class="form-group">
                                 <label for="addressInputText">Address</label>
-                                <input type="text" class="form-control" id="addressInputText" placeholder="enter address">
+                                <input type="text" class="form-control" id="addressInputText" placeholder="Enter address">
                             </div>
                             <div class="form-group">
                                 <label for="priceInputText">Price</label>
                                 <input type="text" class="form-control" id="priceInputText"
-                                       placeholder="enter price">
+                                       placeholder="Enter price">
                             </div>
                             <div class="form-group">
                                 <label for="sizeInputText">Size</label>
                                 <input type="text" class="form-control" id="sizeInputText"
-                                       placeholder="enter size">
+                                       placeholder="Enter size">
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+            <br>
 
             <div class="row">
                 <div class="col">
@@ -66,11 +65,11 @@
                     </a>
                 </div>
             </div>
-
+            <br>
             <div class="row">
                 <div class="col">
                     <a href="Frontpage_lender_signed_in.html">
-                        <button id="saveBtn">Save</button>
+                        <button class="btn btn-primary" id="saveBtn">Save</button>
                     </a>
                 </div>
             </div>
@@ -79,15 +78,15 @@
         <div class="col" id="rightPanel">
             <p>Type</p>
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="flatCheck">
-                <label class="form-check-label" for="flatCheck">Flat</label>
+                <input type="radio" name="flexRadioDefault" class="form-check-input" id="flatCheck" checked>
+                <label class="form-check-label" for="flatCheck">Apartment</label>
             </div>
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="roomCheck">
+                <input type="radio" name="flexRadioDefault" class="form-check-input" id="roomCheck">
                 <label class="form-check-label" for="roomCheck">Room</label>
             </div>
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="houseCheck">
+                <input type="radio" name="flexRadioDefault" class="form-check-input" id="houseCheck">
                 <label class="form-check-label" for="houseCheck">House</label>
             </div>
             <p></p>

@@ -8,59 +8,50 @@
 </head>
 
 <body>
-<header id="header_signin">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <img src="https://cdn-icons-png.flaticon.com/512/951/951867.png" width="50", height="50"></img>
-            </div>
-            <div class="col-lg-8">
-                <h1>Property Portal</h1>
-            </div>
-            <div class="col">
-                <i class="fa fa-user" style="font-size:24px"></i>
-            </div>
-            <div class="col">
-                <i class="fa fa-envelope-o" style="font-size:24px"></i>
-            </div>
-            <div class="col">
-                <button id="signOutBtn">Sign out</button>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div>
+        <div class="col">
+            <img src="https://cdn-icons-png.flaticon.com/512/951/951867.png" width="50" , height="50"></img>
         </div>
     </div>
-</header>
+    <a class="navbar-brand" href="#">Property Portal</a>
 
-<div id="displayPropertyImages">
-    <div class="container">
-        <div class="row">
-
-            <div class="col">
-                <img src="https://d2k4yjfecjwzua.cloudfront.net/97CC2574-D0F1-4641-991B-A0F4DB1514C8/587936_GalleryPicture.jpg" width="200", height="200"></img>
-            </div>
-            <div class="col">
-                <h2>Bogensevej 47, 3th, 5323 Odense M</h2>
-            </div>
-        </div>
+    <div class="ml-auto">
+        <i class="fa fa-user" style="font-size:40px"></i>
     </div>
-</div>
-
-<div class="row">
-    <div class="col-lg-10">
-        <div id="description">
-            <h3>About me</h3>
-            <textarea id="descriptionText">Im 26 years old and studies a master's degree in pharmacy at SDU. In addition to studying, she works on the side at a pharmacy. I love going for long walks in nature and good food. Intollerant for smelly socks
-            </textarea>
-        </div>
+    <div class="ml-auto">
+        <i class="fa fa-envelope-o float-right" style="font-size:40px"></i>
     </div>
-</div>
-<div class="col">
-    <div id="rightPanel" style="justify-content: center">
+
+    <div class="float-right ml-auto">
+        <a href="Frontpage_not_signed_in.html" class="pull-right">
+            <button class="btn navbar-btn btn-danger pull-right" id="signOutBtn">Sign out</button>
+        </a>
+    </div>
+</nav>
+
+<div>
+    <div style="display: flex;">
+        <img src="https://d2k4yjfecjwzua.cloudfront.net/97CC2574-D0F1-4641-991B-A0F4DB1514C8/587936_GalleryPicture.jpg"
+             width="500" height="500" style="margin-right: 10px"/>
         <div>
+            <h2>Bogensevej 47</h2>
+            <h2>3th</h2>
+            <h2>5323 Odense M</h2>
+            <br>
+            <h3>About me</h3>
+            <textarea style="width: 50pc; height: 250px;" id="descriptionText">Im 26 years old and studies a master's degree in pharmacy at SDU. In addition to studying, she works on the side at a pharmacy. I love going for long walks in nature and good food. Intollerant for smelly socks</textarea>
+            <br>
             <a href="property.html">
-                <button id="applyBtn">Apply</button>
+                <button id="applyBtn" class="btn btn-primary">Apply</button>
             </a>
         </div>
     </div>
 </div>
+
+<div>
+
+</div>
+
 </body>
 </html>

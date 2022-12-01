@@ -8,92 +8,75 @@
 </head>
 
 <body>
-<header id="header_signin">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <img src="https://cdn-icons-png.flaticon.com/512/951/951867.png" width="50", height="50"></img>
-      </div>
-      <div class="col-lg-8">
-        <h1>Property Portal</h1>
-      </div>
-      <div class="col">
-        <i class="fa fa-user" style="font-size:24px"></i>
-      </div>
-      <div class="col">
-        <i class="fa fa-envelope-o" style="font-size:24px"></i>
-      </div>
-      <div class="col">
-        <a href="Frontpage_not_signed_in.html">
-          <button id="signOutBtn">Sign out</button>
-        </a>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div>
+    <div class="col">
+      <img src="https://cdn-icons-png.flaticon.com/512/951/951867.png" width="50" , height="50"></img>
     </div>
   </div>
-</header>
+  <a class="navbar-brand" href="#">Property Portal</a>
+
+  <div class="ml-auto">
+    <i class="fa fa-user" style="font-size:40px"></i>
+  </div>
+  <div class="ml-auto">
+    <i class="fa fa-envelope-o float-right" style="font-size:40px"></i>
+  </div>
+
+  <div class="float-right ml-auto">
+    <a href="Frontpage_not_signed_in.html" class="pull-right">
+      <button class="btn navbar-btn btn-danger pull-right" id="signOutBtn">Sign out</button>
+    </a>
+  </div>
+</nav>
 
 
 <div id="input_form">
   <div class="container">
+    <h1>Matching search results</h1>
     <div class="row">
       <div class="col-lg-10">
         <form>
           <div class="form-group">
-            <input type="text" class="form-control" id="searchInputText" placeholder="search">
+            <input type="text" class="form-control" id="searchInputText" placeholder="Search">
           </div>
         </form>
       </div>
       <div class="col">
-        <button id="searchBtn">Search</button>
+        <a href="Frontpage_searchResult_signin.html">
+          <button id="searchBtn" class="btn btn-primary">Search</button>
+        </a>
       </div>
       <div class="col">
-        <button>
+        <button class="btn btn-primary">
           <i class="fa fa-filter" style="font-size:24px" id="filterBtn"></i>
         </button>
       </div>
     </div>
   </div>
 </div>
+<div class="row">
+  <div class="col-6">
+    <div class="card-deck">
+      <div class="card"  style="width: 18rem;">
+        <img src="https://d2k4yjfecjwzua.cloudfront.net/F69937C4-85F7-4C48-91B9-360034ED3D1E/563686_GalleryPicture.jpg"
+             class="card-img-top img-fluid" alt="..." style="max-height: 200px;">
+        <div class="card-body d-flex flex-column mt-auto">
+          <h5 class="card-title">Apartment 5000kr./month</h5>
+          <p class="card-text">Nice apartment with a view in Odense C.</p>
+          <a href="property.html" id="property1" class="btn btn-primary" style="margin-top: auto">See more information</a>
+        </div>
+      </div>
 
-<div id="displayPropertyCards">
-  <div class="container">
-    <h5>Matching search results</h5>
-    <div class="row">
-      <div class="col">
-        <a href="property.html" id="property1">
-          <img src="https://d2k4yjfecjwzua.cloudfront.net/225EB529-A6B6-49C3-9DE1-0142B586DA1A/586730_GalleryPicture.jpg"
-               width="200" , height="200"></img>
-        </a>
+      <div class="card" style="width: 18rem;">
+        <img src="https://d2k4yjfecjwzua.cloudfront.net/CDC980E8-1777-44A8-B5CE-A7F4A97E7FBE/556277_GalleryPicture.jpg"
+             class="card-img-top img-adjusted" alt="..." style="max-height: 200px;">
+        <div class="card-body d-flex flex-column mt-auto">
+          <h5 class="card-title">House 7000kr./month</h5>
+          <p class="card-text">Quiet house with outdoor space in Aarhus C.</p>
+          <a href="property.html" id="property2" class="btn btn-primary" style="margin-top: auto">See more information</a>
+        </div>
       </div>
-      <div class="col">
-        <a href="property.html" id="property2">
-          <img src="https://d2k4yjfecjwzua.cloudfront.net/11663263-FF8B-4BBA-A7B2-909C15158C31/587051_GalleryPicture.jpg"
-               width="200" , height="200"></img>
-        </a>
-      </div>
-      <div class="col">
-
-      </div>
-      <div class="col">
-
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <p>nice flat with at the harbour
-        <p>
-      </div>
-      <div class="col">
-        <p>room in old house house
-        <p>
-      </div>
-      <div class="col">
-
-      </div>
-      <div class="col">
-
-      </div>
-    </div>
     </div>
   </div>
 </div>
