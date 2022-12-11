@@ -1,4 +1,4 @@
-Scenario: Navigate to apartment page when property is clicked
+Scenario: Navigated to apartment page when property is clicked
 
 Given I am on Frontpage_signed_in
 When I click on property1
