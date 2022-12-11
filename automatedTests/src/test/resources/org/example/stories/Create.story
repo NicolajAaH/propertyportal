@@ -1,10 +1,10 @@
-Scenario: Navigated to post property page when post property is clicked
+Scenario: I am navigated to post property page when I click on post property
 
 Given I am on Frontpage_landlord_signed_in
 When I click on postBtn
 Then post_property is displayed for me
 
-Scenario: On post property page, when filling out all required fields and save is clicked, I am navigated to frontpage
+Scenario: I am navigated to frontpage when I am on post property page, and when I fill out all required fields and I click save
 
 Given I am on post_property
 When I fill addressInputText with Address
@@ -14,7 +14,3 @@ And I check flatCheck
 And I check furnishedCheck
 And I click on saveBtn
 Then Frontpage_landlord_signed_in is displayed for me
-
-
-
-
