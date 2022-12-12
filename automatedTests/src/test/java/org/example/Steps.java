@@ -29,7 +29,7 @@ public class Steps {
     private final String url = "file:///Users/nicolajaalykkehansen/ise/propertyportal/html/";
 
 
-    @Given("I am on $page")
+    @Given("I am on the page $page")
     public void givenOnPage(String page) throws InterruptedException {
         driver.get(url + page + ".html");
         assertThat(driver.getCurrentUrl()).isEqualTo(url + page + ".html");
@@ -56,7 +56,7 @@ public class Steps {
 
     }
 
-    @Then("$page is displayed for me")
+    @Then("the page $page is displayed for me")
     public void navigatedToPage(String page) throws InterruptedException {
         assertThat(driver.getCurrentUrl()).isEqualTo(url + page + ".html");
         Thread.sleep(2000);
